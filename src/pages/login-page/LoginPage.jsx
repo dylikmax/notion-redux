@@ -3,7 +3,7 @@ import { inputStyle, buttonStyle } from "../../styles/tailwind.styles";
 import { z } from "zod";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLoginUser } from "../../redux/user/actions";
-import { loginSchema } from "../../schemas/login-schema";
+import { loginSchema } from "../../schemas/login.schema";
 
 function LoginPage({ handleToReg }) {
   const [formData, setFormData] = useState({
