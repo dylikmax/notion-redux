@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "fff@gmail.com",
+      "password": "Abc12345",
+      "createTime": 1732530968131
+    },
+    {
+      "id": "32c4",
+      "email": "2@gmail.com",
+      "password": "Aa111111",
+      "createTime": 1732930968131
+    }
+  ],
+  "notes": [
+    {
+      "userId": "32c4",
+      "id": "1732530968131",
+      "name": "Do homework",
+      "body": "Just do math, physics and chemistry."
+    },
+    {
+      "userId": "1",
+      "id": "1732830968131",
+      "name": "Make a dinner",
+      "body": "Who trust bro cooking?!"
+    },
+    {
+      "id": "1733686039514",
+      "name": "Go to sleep",
+      "userId": "1",
+      "body": "You need to sleep at least 8 hours a day."
+    }
+  ]
+}
