@@ -13,27 +13,9 @@ User can create, delete and edit his own notes. Each user can do actions with on
 
 ### UI
 UI is very simple and has no overs. All styles was written on Tailwind CSS.
-#### Authorization:
-Login page
-![Login page](https://i.imgur.com/LH4vJFd.png)
 
-Registration page
-![Registration page](https://i.imgur.com/PC0PID5.png)
-
----
-#### Main page:
-![Main page](https://i.imgur.com/24IM20Z.png)
-
----
-#### Notes:
-All notes
+Page with all users's notes
 ![All notes page](https://i.imgur.com/emv3ZEK.png)
-
-Note
-![Note page](https://i.imgur.com/gMHLTO2.png)
-
-Editing note
-![Editing note](https://i.imgur.com/mU6vmWv.png)
 
 ### For launching
 Write `npx json-server db.json` & `npm run dev` into two terminals.
