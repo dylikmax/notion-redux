@@ -1,7 +1,7 @@
 # Notion Redux
 **Notion Redux** — a project, that provide an opportunity to create and manage notes for each registered user.
 ### Techs and libraries: 
-`HTML` `Tailwind CSS` `JavaScript` `React` `React Router` `Redux` `JSON Server` `Zod`
+`HTML` `Tailwind CSS` `JavaScript` `React` `React Router` `Redux` `React Redux` `Redux Thunk` `JSON Server` `Zod`
 ### Database & API
 For storing users and notes in this project used JSON Server, that store data in `db.json`. API for this database was written automatically.
 
