@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUserById } from "../redux/user/actions";
 import { useEffect } from "react";
 import Loading from "./Loading";
-import { fetchNotes } from "../redux/notes/actions";
+import { fetchNotes, REMOVE_ERRORS } from "../redux/notes/actions";
+import NotFoundPage from "../pages/not-found-page/NotFoundPage";
 
 function RequireAuth() {
   const { loading: userLoading } = useSelector((state) => state.user);
+  const { error: noteError } = useSelector((state) => state.notes);
   const dispatch = useDispatch();
   const location = useLocation();
   const id = localStorage.getItem("id");
@@ -20,6 +22,11 @@ function RequireAuth() {
 
   if (userLoading) {
     return <Loading />;
+  }
+
+  if (noteError) {
+    console.log("noteError")
+    return <NotFoundPage />
   }
 
   if (!id && location.pathname !== "/login") {

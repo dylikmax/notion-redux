@@ -24,7 +24,7 @@ function NotePage() {
 
   useEffect(() => {
     dispatch(fetchNote(id, userId));
-  }, [id]);
+  }, [id, userId]);
 
   const note = useSelector((state) => state.notes.currentData);
 

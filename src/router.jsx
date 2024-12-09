@@ -5,6 +5,7 @@ import AboutMePage from "./pages/about-me-page/AboutMePage";
 import NotesPage from "./pages/notes-page/NotesPage";
 import NotePage from "./pages/note-page/NotePage";
 import SignInWrapper from "./pages/login-page/SignInWrapper";
+import NotFoundPage from "./pages/not-found-page/NotFoundPage";
 
 export const router = createBrowserRouter([
     {
@@ -28,12 +29,16 @@ export const router = createBrowserRouter([
             {
               path: "/notes/:id",
               element: <NotePage />,
-            },
+            }
           ],
         },
         {
           path: "/login",
           element: <SignInWrapper />,
+        },
+        {
+          path: "*",
+          element: <NotFoundPage />,
         },
       ],
     },

@@ -11,6 +11,7 @@ import {
   NOTE_FETCH_START,
   NOTE_FETCH_SUCCESS,
   NOTE_FETCH_FAIL,
+  REMOVE_ERRORS,
 } from "./actions";
 
 const DEFAULT_STATE = {
@@ -76,6 +77,9 @@ export default function notesReducer(state = DEFAULT_STATE, action) {
     case NOTE_FETCH_FAIL: {
       const { payload } = action;
       return { ...state, loading: false, error: payload };
+    }
+    case REMOVE_ERRORS: {
+      return {...state, error: null}
     }
     default:
       return state;

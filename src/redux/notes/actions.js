@@ -12,6 +12,7 @@ export const NOTES_PATCH_FAIL = "NOTES_PATCH_FAIL";
 export const NOTE_FETCH_START = "NOTE_FETCH_START";
 export const NOTE_FETCH_SUCCESS = "NOTE_FETCH_SUCCESS";
 export const NOTE_FETCH_FAIL = "NOTE_FETCH_FAIL";
+export const REMOVE_ERRORS = "REMOVE_ERRORS"
 
 export const deleteNote = (id) => ({ type: DELETE_NOTE, id });
 export const createNote = (note) => ({
@@ -68,10 +69,7 @@ export const fetchNote = (id, userId) => async (dispatch) => {
   dispatch({ type: NOTE_FETCH_START });
   try {
     const note = await API.getNote(id, userId);
-    if (note.length === 0) {
-      throw new Error('Note is not found')
-    }
-    dispatch({ type: NOTE_FETCH_SUCCESS, payload: note[0] });
+    dispatch({ type: NOTE_FETCH_SUCCESS, payload: note });
   } catch (error) {
     dispatch({ type: NOTE_FETCH_FAIL, payload: error });
   }

@@ -46,9 +46,13 @@ export default class API {
 
   static getNote = async (id, userId) => {
     const searchParams = new URLSearchParams({ id, userId }).toString();
-    return await this.fetch(`${this.API_URL}notes?${searchParams}`, {
+    const notes = await this.fetch(`${this.API_URL}notes?${searchParams}`, {
       method: "GET",
     });
+    if (notes.length === 0) {
+      throw new Error("Note doesn't exsist or you don't have access to it.");
+    }
+    return notes[0];
   };
 
   static createNote = async (name, userId, time) => {
